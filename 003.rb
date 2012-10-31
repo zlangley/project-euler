@@ -14,18 +14,17 @@ class Integer
   def prime?(k=10)
     return true if self == 2
     return false if self <= 1 || self % 2 == 0
-    d = self - 1
-    s = 0
+    s, d = 0, self - 1
     while d % 2 == 0
       d /= 2
       s += 1
     end
     k.times do
-      a = 2 + rand(self-4)
+      a = rand(2, self - 2)
       x = a.pow_mod(d, self)
       next if x == 1 or x == self-1
-      for r in (1 .. s-1)
-        x = (x**2) % self
+      1.upto(s-1) do |r|
+        x = x*x % self
         return false if x == 1
         break if x == self-1
       end
