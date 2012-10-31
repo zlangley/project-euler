@@ -5,7 +5,7 @@ i = 2
 while i*i < 2_000_000
   if is_prime[i]
     sum += i
-    (i+i..2_000_000).step(i) { |j| is_prime[j] = false }
+    (i*i..2_000_000).step(i) { |j| is_prime[j] = false }
   end
   i += 1
 end
