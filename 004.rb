@@ -1,1 +1,1 @@
-puts (100..999).map { |a| (a..999).map { |b| a*b }.select { |p| p.to_s == p.to_s.reverse } }.max
+puts (100..999).flat_map { |a| (a..999).map { |b| a*b }.select { |c| c.to_s == c.to_s.reverse } }.max

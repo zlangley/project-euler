@@ -1,10 +1,4 @@
-class String
-  def pandigital?
-    each = Array.new(10, false)
-    self.chars.each { |c| each[c.to_i] = true }
-    !each[1..-1].include?(false)
-  end
-end
+require './euler'
 
 puts (2..100).flat_map { |a|
   (a+1..5000).map { |b|
