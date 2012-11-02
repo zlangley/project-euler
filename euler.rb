@@ -48,7 +48,7 @@ class String
 end
 
 module Math
-  # Sieve of Erotosthenes
+  # Sieve of Eratosthenes
   def self.primes_less_than(n)
     s = (0..n).to_a
     s[0] = s[1] = nil
