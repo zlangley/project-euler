@@ -20,7 +20,7 @@ class Integer
       s += 1
     end
     k.times do
-      a = rand(2, self - 2)
+      a = rand(2..self - 2)
       x = a.pow_mod(d, self)
       next if x == 1 or x == self-1
       1.upto(s-1) do |r|
