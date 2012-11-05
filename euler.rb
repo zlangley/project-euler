@@ -1,12 +1,12 @@
 class Integer
-  def pow_mod(n, m)
+  def mod_pow(n, m)
     if n == 0
       1
     elsif n.even?
-      c = pow_mod(n/2, m)
+      c = mod_pow(n/2, m)
       c*c % m
     else
-      c = pow_mod(n/2, m)
+      c = mod_pow(n/2, m)
       c*c*self % m
     end
   end
@@ -22,7 +22,7 @@ class Integer
     end
     k.times do
       a = rand(2..self - 2)
-      x = a.pow_mod(d, self)
+      x = a.mod_pow(d, self)
       next if x == 1 or x == self-1
       1.upto(s-1) do |r|
         x = x*x % self
