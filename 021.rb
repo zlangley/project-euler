@@ -10,12 +10,11 @@ def divisor_sum(n)
   sum
 end
 
-sum = (1..10000).inject do |a,n|
+puts (1..10000).inject(0) { |a,n|
   m = divisor_sum(n)
   if n < m && divisor_sum(m) == n
     a + n + m
   else
     a
   end
-end
-puts sum
+}
