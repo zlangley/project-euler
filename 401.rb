@@ -6,7 +6,7 @@ def sigma(n)
   res, i = 0, 1
   while i*i <= n
     res += (n / i) * i * i
-    res += i * (sum_of_squares(n/i) - sum_of_squares(n/(i+1))) if i*i != n
+    res += i * (sum_of_squares(n/i) - sum_of_squares(n/(i+1))) if i != n/i
     i += 1
   end
   res
