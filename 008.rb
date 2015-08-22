@@ -21,4 +21,4 @@ n = <<END
 71636269561882670428252483600823257530420752963450
 END
 
-puts n.chars.each_cons(5).map { |x| x.map(&:to_i).inject(:*) }.max
+puts n.gsub(/\n/, '').chars.each_cons(5).map { |x| x.map(&:to_i).inject(:*) }.max
